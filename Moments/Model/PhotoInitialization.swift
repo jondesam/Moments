@@ -8,8 +8,8 @@
 
 import UIKit
 
-class BaseDePhotos{
-    static let charger = BaseDePhotos()
+class PhotoInitialization{
+    static let charger = PhotoInitialization()
     
     func touteLesPhotos() -> [Photo] {
         var photos = [Photo]()

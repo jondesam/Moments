@@ -17,7 +17,7 @@ class CollectionController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photos = BaseDePhotos.charger.touteLesPhotos()
+        photos = PhotoInitialization.charger.touteLesPhotos()
       
     }
 
