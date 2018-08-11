@@ -15,6 +15,8 @@
 		95F2F04D211F264F0080A125 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F2F04B211F264F0080A125 /* TableController.swift */; };
 		95F2F04E211F264F0080A125 /* TableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95F2F04C211F264F0080A125 /* TableController.xib */; };
 		95F2F050211F27BD0080A125 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F2F04F211F27BD0080A125 /* TabBarController.swift */; };
+		95F2F052211F2FBE0080A125 /* photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F2F051211F2FBE0080A125 /* photo.swift */; };
+		95F2F054211F5B3B0080A125 /* BaseDePhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F2F053211F5B3B0080A125 /* BaseDePhotos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		95F2F04B211F264F0080A125 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		95F2F04C211F264F0080A125 /* TableController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableController.xib; sourceTree = "<group>"; };
 		95F2F04F211F27BD0080A125 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		95F2F051211F2FBE0080A125 /* photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photo.swift; sourceTree = "<group>"; };
+		95F2F053211F5B3B0080A125 /* BaseDePhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDePhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				95F2F02E211E42470080A125 /* AppDelegate.swift */,
-				95F2F042211E46210080A125 /* Model */,
 				95F2F041211E461A0080A125 /* View */,
+				95F2F042211E46210080A125 /* Model */,
 				95F2F040211E46110080A125 /* Controller */,
 				95F2F035211E42470080A125 /* Assets.xcassets */,
 				95F2F037211E42470080A125 /* LaunchScreen.storyboard */,
@@ -93,6 +97,8 @@
 		95F2F042211E46210080A125 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				95F2F051211F2FBE0080A125 /* photo.swift */,
+				95F2F053211F5B3B0080A125 /* BaseDePhotos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 				95F2F050211F27BD0080A125 /* TabBarController.swift in Sources */,
 				95F2F02F211E42470080A125 /* AppDelegate.swift in Sources */,
 				95F2F045211E46720080A125 /* CollectionController.swift in Sources */,
+				95F2F054211F5B3B0080A125 /* BaseDePhotos.swift in Sources */,
+				95F2F052211F2FBE0080A125 /* photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,9 +12,13 @@ class CollectionController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var photos = [Photo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        photos = BaseDePhotos.charger.touteLesPhotos()
+      
     }
 
 
