@@ -12,7 +12,7 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     @IBOutlet weak var tableView: UITableView!
 
-    var photos = [Photo]()
+    var arrayOfInitializedPhotos = [Photo]()
     let cellID = "MomentTableCell"
     
     override func viewDidLoad() {
@@ -24,14 +24,14 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let nib = UINib(nibName: cellID, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellID)
         
-         photos = PhotoInitialization.charger.touteLesPhotos()
+         arrayOfInitializedPhotos = PhotoInitialization.charger.touteLesPhotos()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photos.count
+        return arrayOfInitializedPhotos.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? MomentTableCell{
-            cell.mep(photo: photos[indexPath.row])
+            cell.mep(photo: arrayOfInitializedPhotos[indexPath.row])
             return cell
         }
         return UITableViewCell()

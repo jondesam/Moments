@@ -8,18 +8,49 @@
 
 import UIKit
 
-class CollectionController: UIViewController {
+class CollectionController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var photos = [Photo]()
+    var arrayOfInitializedPhotos = [Photo]()
+    var cellID = "MomentCollectionCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photos = PhotoInitialization.charger.touteLesPhotos()
-      
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        let nib = UINib(nibName: cellID, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier:cellID)
+        
+        arrayOfInitializedPhotos = PhotoInitialization.charger.touteLesPhotos()
     }
 
-
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       return arrayOfInitializedPhotos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? MomentCollectionCell{
+            cell.mep(photo: arrayOfInitializedPhotos[indexPath.row])
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
+    }
+    
+    
 }
