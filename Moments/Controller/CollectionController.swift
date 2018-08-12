@@ -41,7 +41,15 @@ class CollectionController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 150)
+        
+        let image = arrayOfInitializedPhotos[indexPath.item].image
+        let lageur = collectionView.frame.width / 2 - 30
+        let ratio = lageur / image.size.width
+        let width = image.size.width * ratio
+        let height = image.size.height * ratio
+        
+        
+        return CGSize(width: width , height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
