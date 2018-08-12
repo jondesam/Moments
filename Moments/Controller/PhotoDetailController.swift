@@ -24,6 +24,15 @@ class PhotoDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let nav = navigationController {
+            retourBouton.isHidden = true
+            } else {
+                //pas utile
+                retourBouton.isHidden = false
+            }
+        
+        
         if photo != nil {
             nomLabel.text = "De: " + photo!.nom
             descLabel.text = photo!.desc
