@@ -28,11 +28,9 @@ class PhotoDetailController: UIViewController {
             nomLabel.text = "De: " + photo!.nom
             descLabel.text = photo!.desc
             photoImage.image = photo!.image
-            let taille = Ratio.obtenir.taille(largeur: view.frame.width - 20, image: photo!.image)
-            
-            
-            
-           largeurContrainte.constant = taille.width
+            let taille = Ratio.obtenir.taille(largeur: view.frame.width - 40, image: photo!.image)
+    
+            largeurContrainte.constant = taille.width
             hauteurContrainte.constant = taille.height
         }
         
@@ -40,6 +38,7 @@ class PhotoDetailController: UIViewController {
     }
 
     @IBAction func retourAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
